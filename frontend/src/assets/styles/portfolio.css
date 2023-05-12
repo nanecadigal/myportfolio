@@ -1,0 +1,104 @@
+/* 
+=========
+PROFILE PAGE STYLES 
+=========
+*/
+.portfolio {
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+    padding: 0 8%;
+}
+.portfolio .typed {
+    color: var(--persian-red);
+    font-weight: 800;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 7px;
+}
+.social-icons .fa-brands {
+   color: var(--cornsilk);
+}
+.profile-options {
+    display: flex;
+    align-items: center;
+}
+.image-container {
+    background-image: url(../images/pngwing.com.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container .profile-image {
+    height: 300px;
+}
+.profile {
+    width: 220px;
+}
+
+
+/* SHAPE DIVIDER */
+.custom-shape-divider-bottom-1683817761 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1683817761 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1683817761 .shape-fill {
+    fill: #FFFFFF;
+}
+
+@media only screen and (max-width: 575px) and (min-width: 320px) {
+    .custom-shape-divider-bottom-1683817761 svg {
+        height: 60px;
+    }
+}
+
+/* Small device */
+@media (min-width: 576px) {
+    .custom-shape-divider-bottom-1683817761 svg {
+        height: 60px;
+    }
+}
+
+/* Medium device */
+@media (min-width: 768px) {
+    .custom-shape-divider-bottom-1683817761 svg {
+        height: 60px;
+    }
+}
+
+/* Large device */
+@media (min-width: 992px) {
+    .custom-shape-divider-bottom-1683817761 svg {
+        height: 150px;
+    }
+}
+
+/* X-Large device */
+@media (min-width: 1200px) {
+    .custom-shape-divider-bottom-1683817761 svg {
+        height: 150px;
+    }
+}
+
+/* XX-Large device */
+@media (min-width: 1400px) {
+    .custom-shape-divider-bottom-1683817761 svg {
+        height: 150px;
+    }
+}
