@@ -1,15 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/styles/portfolio.css";
 import { TypeAnimation } from "react-type-animation";
-import profileImg from "../assets/images/profile.png";
-import blob from "../assets/images/blob.png";
+import html from "../assets/images/tech-icons/icons8-html-100.png";
+import css from "../assets/images/tech-icons/icons8-css-100.png";
+import javascript from "../assets/images/tech-icons/icons8-javascript-100.png";
+import react from "../assets/images/tech-icons/icons8-react-100.png";
+import nodejs from "../assets/images/tech-icons/icons8-nodejs-100.png";
+import mongodb from "../assets/images/tech-icons/icons8-mongodb-100.png";
+import Navigation from "../components/Navigation";
 
 function Portfolio() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    html,
+    css,
+    javascript,
+    react,
+    nodejs,
+    mongodb,
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
+      <Navigation />
       <div className="portfolio">
-        <div className="d-flex flex-column justify-content-center h-100 border border-1">
-          <div className="row d-flex justify-content-center align-items-center">
+        <div className="container d-flex flex-column justify-content-center h-100">
+          <div className="row justify-content-center align-items-center">
             <div className="col-sm-12 col-lg-6">
               <div className="social-icons">
                 <a href="" title="Facebook">
@@ -22,55 +47,83 @@ function Portfolio() {
                   <i class="fa-brands fa-square-github fa-xl"></i>
                 </a>
               </div>
-              <div className="profile-name">
-                <span className="text-white fs-3 text">
-                  Hello, I'm <span className="highlighted-text">Hernane</span>
-                </span>
-              </div>
-              <div className="profile-role">
-                <span className="primary-text">
-                  <h1 className="typed">
-                    <TypeAnimation
-                      repeat={Infinity}
-                      cursor={true}
-                      sequence={[
-                        "Full stack Dev",
-                        3000,
-                        "Web Designer",
-                        3000,
-                        "Graphic Designer",
-                        3000,
-                        "Digital Marketing",
-                        3000,
-                      ]}
-                    />
-                  </h1>
-                  <span className="text-white">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi
+              <div className="text-container">
+                <div className="profile-name">
+                  <span className="text-white fs-3 text">
+                    Hello, I'm <span className="highlighted-text">Hernane</span>
                   </span>
-                </span>
+                </div>
+                <div className="profile-role">
+                  <span className="primary-text">
+                    <h1 className="typed">
+                      <TypeAnimation
+                        repeat={Infinity}
+                        cursor={true}
+                        sequence={[
+                          "Full stack Dev",
+                          3000,
+                          "Web Designer",
+                          3000,
+                          "Graphic Designer",
+                          3000,
+                          "Digital Marketing",
+                          3000,
+                        ]}
+                      />
+                    </h1>
+                    <span className="text-white">
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                      corrupti quos dolores et quas molestias excepturi
+                    </span>
+                  </span>
+                </div>
               </div>
-              <div className="d-flex gap-2 my-3">
-                <button className="btn btn-primary px-5 py-3 rounded-pill">
-                  Hire Me
-                </button>
+              <div className="btn-wrapper my-3">
+                <button className="btn-solid-lg rounded-pill">Hire Me</button>
                 <a
                   href="hernanecadigal_resume.pdf"
                   download={"hernanecadigal_resume.pdf"}
                 >
-                  <button className="btn btn-secondary px-5 py-3 rounded-pill">
+                  <button className="btn-outline-lg rounded-pill">
                     Get Resume
                   </button>
                 </a>
               </div>
             </div>
             <div className="col-sm-12 col-lg-6">
-              <div className="profile-image border border-2 align-right">
-                <div>asd</div>
-                <div>asd</div>
-              </div>
+              {/* <div className="image-container">
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Image ${index + 1}`}
+                    className={`rotating-image ${
+                      index === currentIndex ? "active" : ""
+                    }`}
+                  />
+                ))}
+              </div> */}
+              {/* <ul className="tech-stack-icons text-white">
+                  <li>
+                    <img src={html} alt="HTML logo" id="stack"/>
+                  </li>
+                  <li>
+                    <img src={css} alt="HTML logo" id="stack"/>
+                  </li>
+                  <li>
+                    <img src={javascript} alt="HTML logo" id="stack"/>
+                  </li>
+                  <li>
+                    <img src={react} alt="HTML logo" id="stack"/>
+                  </li>
+                  <li>
+                    <img src={nodejs} alt="HTML logo" id="stack"/>
+                  </li>
+                  <li>
+                    <img src={mongodb} alt="HTML logo" id="stack"/>
+                  </li>
+                </ul> */}
             </div>
           </div>
         </div>

@@ -1,0 +1,181 @@
+.introduction {
+  display: flex;
+  padding: 10px 0;
+}
+.introduction .card {
+  border: none;
+}
+.introduction .fa-stack {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  /* margin-bottom: 1rem; */
+  line-height: 150px;
+}
+.introduction .fa-stack .blob {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url("../images/blob.svg") center center no-repeat;
+  background-size: 150px 150px;
+}
+.introduction .fa-stack-1x {
+  color: var(--night);
+  font-size: 2rem;
+}
+.introduction .card-title {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+.introduction p {
+  text-align: center;
+  line-height: 25px;
+  color: var(--gunmetal);
+}
+
+/* ABOUT INTRODUCTION  */
+
+.about .image-container {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 100%;
+}
+.about .image-container img {
+  margin: 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.about .image-container:hover img {
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.about .intro-image {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.about .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .section-title {
+  font-weight: 600;
+  color: var(--verdigris);
+}
+
+.about .aboutme-details {
+  text-align: left;
+}
+
+.about .quote {
+  font-style: italic;
+  text-align: left;
+  color: rgb(172, 172, 172);
+}
+.about .quote-author {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--night);
+}
+
+/* SERVICES INTRODUCTION */
+.services {
+  text-align: center;
+  background-color: rgba(236, 234, 234, 0.274);
+}
+.services .section-title {
+  color: var(--verdigris);
+  font-weight: 600;
+}
+.services .card {
+  border: none;
+  margin-bottom: 16px;
+}
+.services .card-image {
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.services .card-image img {
+  transition: all 0.3s;
+  margin: 0;
+}
+.services .card-image:hover img {
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+/* TESTIMONIAL INTRODUCTION  */
+.testimonials {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/fabio-oyXis2kALVg-unsplash.jpg') center center no-repeat;
+	background-size: cover;
+    text-align: center;
+}
+.testimonials .section-title {
+    color: var(--verdigris);
+    font-weight: 600;
+}
+.testimonials .h2-heading {
+    color: white;
+}
+.testimonials .card {
+    margin: 50px 0;
+    padding: 20px
+}
+.testimonials .card-image {
+    object-fit: cover;
+    object-position: center;
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 20px auto;
+}
+.testimonials .card-body {
+    padding: 0;
+}
+
+/* PROJECTS INTRODUCTION */
+
+
+
+
+
+/* Large device */
+@media (min-width: 992px) {
+  .about .intro-image {
+    flex-direction: row;
+  }
+  .about .text-container {
+    padding: 0 15px;
+  }
+}
+
+/* X-Large device */
+@media (min-width: 1200px) {
+  .about .intro-image {
+    flex-direction: row;
+  }
+  .about .text-container {
+    padding: 0 15px;
+  }
+}
+
+/* XX-Large device */
+@media (min-width: 1400px) {
+  .about .intro-image {
+    flex-direction: row;
+  }
+  .about .text-container {
+    padding: 0 15px;
+  }
+}

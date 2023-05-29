@@ -1,104 +1,162 @@
-/* 
-=========
-PROFILE PAGE STYLES 
-=========
-*/
 .portfolio {
-    height: 100vh;
-    position: relative;
-    background-color: #000000;
-    padding: 0 8%;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+}
+.container {
+  line-height: 40px;
+}
+.portfolio .text-container {
+  text-align: center;
 }
 .portfolio .typed {
-    color: var(--persian-red);
-    font-weight: 800;
+  color: var(--fluorescent-cyan);
+  font-weight: 800;
 }
-
 .social-icons {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    gap: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 7px;
 }
 .social-icons .fa-brands {
-   color: var(--cornsilk);
+  color: var(--fluorescent-cyan);
 }
 .profile-options {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.tech-stack-icons {
+  display: none;
+  list-style: none;
+  flex-wrap: wrap;
 }
 .image-container {
-    background-image: url(../images/pngwing.com.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.container .profile-image {
-    height: 300px;
-}
-.profile {
-    width: 220px;
+  position: relative;
+  height: 100px; /* Adjust as needed */
+  overflow: hidden;
 }
 
+.rotating-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+}
+
+.rotating-image.active {
+  opacity: 1;
+}
 
 /* SHAPE DIVIDER */
 .custom-shape-divider-bottom-1683817761 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .custom-shape-divider-bottom-1683817761 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
 }
 
 .custom-shape-divider-bottom-1683817761 .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 @media only screen and (max-width: 575px) and (min-width: 320px) {
-    .custom-shape-divider-bottom-1683817761 svg {
-        height: 60px;
-    }
+  .custom-shape-divider-bottom-1683817761 svg {
+    height: 60px;
+  }
 }
 
 /* Small device */
 @media (min-width: 576px) {
-    .custom-shape-divider-bottom-1683817761 svg {
-        height: 60px;
-    }
+  .custom-shape-divider-bottom-1683817761 svg {
+    height: 60px;
+  }
 }
 
 /* Medium device */
 @media (min-width: 768px) {
-    .custom-shape-divider-bottom-1683817761 svg {
-        height: 60px;
-    }
+  .custom-shape-divider-bottom-1683817761 svg {
+    height: 100px;
+  }
 }
 
 /* Large device */
 @media (min-width: 992px) {
-    .custom-shape-divider-bottom-1683817761 svg {
-        height: 150px;
-    }
+  .custom-shape-divider-bottom-1683817761 svg {
+    height: 110px;
+  }
+  .portfolio .typed {
+    font-size: 48px;
+  }
+  .social-icons {
+    justify-content: flex-start;
+  }
+  .portfolio .text-container {
+    text-align: left;
+  }
+  .btn-wrapper {
+    justify-content: flex-start;
+  }
+  .tech-stack-icons {
+    display: flex;
+  }
 }
 
 /* X-Large device */
 @media (min-width: 1200px) {
-    .custom-shape-divider-bottom-1683817761 svg {
-        height: 150px;
-    }
+  .custom-shape-divider-bottom-1683817761 svg {
+    height: 150px;
+  }
+  .portfolio .typed {
+    font-size: 48px;
+  }
+  .social-icons {
+    justify-content: flex-start;
+  }
+  .portfolio .text-container {
+    text-align: left;
+  }
+  .tech-stack-icons {
+    display: flex;
+  }
 }
 
 /* XX-Large device */
 @media (min-width: 1400px) {
-    .custom-shape-divider-bottom-1683817761 svg {
-        height: 150px;
-    }
+  .custom-shape-divider-bottom-1683817761 svg {
+    height: 150px;
+  }
+  .portfolio .typed {
+    font-size: 48px;
+  }
+  .social-icons {
+    justify-content: flex-start;
+  }
+  .portfolio .text-container {
+    text-align: left;
+  }
+  .btn-wrapper {
+    justify-content: flex-start;
+  }
+  .tech-stack-icons {
+    display: flex;
+  }
 }

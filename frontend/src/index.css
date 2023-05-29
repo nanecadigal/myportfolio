@@ -1,39 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700;800&display=swap");
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
-    --cornsilk: #faf4d3ff;
-    --reseda-green: #82846dff;
-    --persian-red: #bb4430ff;
-    --indigo-dye: #003d5bff;
-    --oxford-blue: #1d263bff;
+  --night: #0b0c10ff;
+  --gunmetal: #1f2833ff;
+  --silver: #c5c6c7ff;
+  --fluorescent-cyan: #66fcf1ff;
+  --verdigris: #45a29eff;
+
+  --gradient-top: linear-gradient(0deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-right: linear-gradient(90deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-bottom: linear-gradient(180deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-left: linear-gradient(270deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-top-right: linear-gradient(45deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-bottom-right: linear-gradient(135deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-top-left: linear-gradient(225deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-bottom-left: linear-gradient(315deg, #0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
+  --gradient-radial: radial-gradient(#0b0c10ff, #1f2833ff, #c5c6c7ff, #66fcf1ff, #45a29eff);
 }
-body, html {
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-}
-h1 {
-  font-size: 40px;
-}
-h2 {
-  font-size: 32px;
-}
-h3 {
-  font-size: 28px;
-}
-h4 {
-  font-size: 24px;
-}
-h5 {
-  font-size: 20px;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+h1 {
+	color: #484a46;
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+	color: #484a46;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+	color: #484a46;
+	font-weight: 700;
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+	color: #484a46;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+	color: #484a46;
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.625rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+h6 {
+	color: #484a46;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.375rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+/* BUTTON STYLES */
+.btn-solid-reg {
+	display: inline-block;
+	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
+	border: 1px solid var(--fluorescent-cyan);
+	border-radius: 2px;
+	background-color: var(--fluorescent-cyan);
+	color: var(--night);
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+.btn-solid-reg:hover {
+	background-color: transparent;
+	color: var(--fluorescent-cyan);/* needs to stay here because of the color property of a tag */
+	text-decoration: none;
+}
+.btn-solid-lg {
+	display: inline-block;
+	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
+	border: 1px solid var(--fluorescent-cyan);
+	border-radius: 2px;
+	background-color: var(--fluorescent-cyan);
+	color: var(--night);
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-lg:hover {
+	background-color: transparent;
+	color: var(--fluorescent-cyan); /* needs to stay here because of the color property of a tag */
+	text-decoration: none;
+}
+.btn-outline-reg {
+	display: inline-block;
+	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
+	border: 1px solid var(--fluorescent-cyan);
+	border-radius: 2px;
+	background-color: transparent;
+	color: var(--fluorescent-cyan);
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-reg:hover {
+	background-color: var(--fluorescent-cyan);
+	color: var(--night);
+	text-decoration: none;
+}
+.btn-outline-lg {
+	display: inline-block;
+	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
+	border: 1px solid var(--fluorescent-cyan);
+	border-radius: 2px;
+	background-color: transparent;
+	color: var(--fluorescent-cyan);
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-lg:hover {
+	background-color: var(--fluorescent-cyan);
+	color: var(--night);
+	text-decoration: none;
 }
